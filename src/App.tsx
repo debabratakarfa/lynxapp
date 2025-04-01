@@ -4,9 +4,11 @@ import './App.css'
 import arrow from './assets/arrow.png'
 import lynxLogo from './assets/lynx-logo.png'
 import reactLynxLogo from './assets/react-logo.png'
+import { Welcome } from './screens/Welcome'
 
 export function App() {
   const [alterLogo, setAlterLogo] = useState(false)
+  const [showWelcome, setShowWelcome] = useState(true)
 
   useEffect(() => {
     console.info('Hello, ReactLynx')
@@ -20,6 +22,14 @@ export function App() {
   const onButtonClick = useCallback(() => {
     console.info('Button clicked!')
   }, [])
+
+  const handleGetStarted = useCallback(() => {
+    setShowWelcome(false)
+  }, [])
+
+  if (showWelcome) {
+    return <Welcome onGetStarted={handleGetStarted} />
+  }
 
   return (
     <view>

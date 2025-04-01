@@ -1,6 +1,7 @@
 :root {
   background-color: #000;
   --color-text: #fff;
+  --primary-color: #ff6448;
 }
 
 .Background {
@@ -154,4 +155,82 @@ text {
 .FooterLogo {
   width: 24px; /* Adjust the size of the logo if needed */
   height: 24px;
+}
+
+/* Welcome Screen Styles */
+.WelcomeScreen {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Welcome {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.WelcomeBanner {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.WelcomeLogo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 16px;
+  animation: Logo--spin infinite 10s linear;
+}
+
+.WelcomeTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.WelcomeSubtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+}
+
+.WelcomeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+}
+
+.WelcomeDescription {
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 48px;
+}
+
+.GetStartedButton {
+  width: 180px;
+  height: 56px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(255, 100, 72, 0.4);
+}
+
+.GetStartedButton text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
 }
